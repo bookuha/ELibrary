@@ -7,7 +7,6 @@ C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\obj\Debug\net6.0\E
 C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\obj\Debug\net6.0\Elibrary.Infrastructure.AssemblyInfo.cs
 C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\obj\Debug\net6.0\Elibrary.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\obj\Debug\net6.0\Elibrary.Infrastructure.dll
-C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\obj\Debug\net6.0\refint\Elibrary.Infrastructure.dll
 C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\obj\Debug\net6.0\Elibrary.Infrastructure.pdb
 C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\obj\Debug\net6.0\ref\Elibrary.Infrastructure.dll
 C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\bin\Debug\net6.0\ELibrary.Domain.dll
@@ -16,3 +15,6 @@ C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\bin\Debug\net6.0\E
 C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\bin\Debug\net6.0\ELibrary.Infrastructure.Persistence.pdb
 C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\bin\Debug\net6.0\ELibrary.Infrastructure.Persistence.dll.config
 C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\obj\Debug\net6.0\Elibrary.Infrastructure.csproj.CopyComplete
+C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\bin\Debug\net6.0\ref\Elibrary.Infrastructure.dll
+C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\bin\Debug\net6.0\ELibrary.Application.Contracts.dll
+C:\Users\booku\RiderProjects\ELibrary\Elibrary.Infrastructure\bin\Debug\net6.0\ELibrary.Application.Contracts.pdb

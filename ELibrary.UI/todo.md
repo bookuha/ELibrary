@@ -9,4 +9,5 @@
 8. Tweak models, they're configured very poorly 
 9. Validation. Make handlers return Either<DTO, Error>
 10. Do I need service registration extension methods?
+11. CANT CREATE DB!
 ![](library.png)

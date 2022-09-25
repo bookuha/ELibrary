@@ -4,29 +4,34 @@ using ELibrary.Application.Commands;
 using ELibrary.Domain.Entities;
 using ELibrary.Infrastructure.Persistence;
 using ELibrary.Application.Contracts.Responses;
-using MapsterMapper;
+using Elibrary.Infrastructure.Mappings;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace ELibrary.Application.Handlers
 {
     public class CreateBookHandler : IRequestHandler<CreateBookCommand,BookResponse>
     {
         private readonly LibraryContext _context;
-        private readonly IMapper _mapper;
 
-        public CreateBookHandler(LibraryContext context, IMapper mapper)
+        public CreateBookHandler(LibraryContext context)
         {
             _context = context;
-            _mapper = mapper;
         }
 
         public async Task<BookResponse> Handle(CreateBookCommand request, CancellationToken cancellationToken)
         {
-            var book = _mapper.Map<Book>(request.Book);
+            var book = request.Book.ToEntity();
+            
+            book.Authors = await _context.Authors.Where(a => request.Book.AuthorIds.Contains(a.Id))
+                .ToListAsync(cancellationToken);
+            book.DownloadableFiles = await _context.Files.Where(f => request.Book.FileIds.Contains(f.Id))
+                .ToListAsync(cancellationToken);
+            
             _context.Books.Add(book);
+            
             await _context.SaveChangesAsync(cancellationToken);
-            var response = _mapper.Map<BookResponse>(book);
-            return response;
+            return book.ToResponse();
 
         }
     }

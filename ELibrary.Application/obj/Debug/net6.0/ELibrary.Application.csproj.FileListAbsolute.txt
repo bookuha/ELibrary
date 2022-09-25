@@ -10,7 +10,6 @@ C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\bin\Debug\net6.0\ELib
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\bin\Debug\net6.0\ELibrary.Domain.pdb
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\obj\Debug\net6.0\ELibrary.Application.csproj.CopyComplete
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\obj\Debug\net6.0\ELibrary.Application.dll
-C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\obj\Debug\net6.0\refint\ELibrary.Application.dll
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\obj\Debug\net6.0\ELibrary.Application.pdb
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\obj\Debug\net6.0\ref\ELibrary.Application.dll
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\bin\Debug\net6.0\ELibrary.Application.Contracts.dll
@@ -18,3 +17,6 @@ C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\bin\Debug\net6.0\ELib
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\bin\Debug\net6.0\ELibrary.Infrastructure.Persistence.pdb
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\bin\Debug\net6.0\ELibrary.Infrastructure.Persistence.dll.config
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\bin\Debug\net6.0\ELibrary.Application.Contracts.pdb
+C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\bin\Debug\net6.0\ref\ELibrary.Application.dll
+C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\bin\Debug\net6.0\Elibrary.Infrastructure.dll
+C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application\bin\Debug\net6.0\Elibrary.Infrastructure.pdb

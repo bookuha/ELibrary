@@ -60,12 +60,9 @@ C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\obj\Debug\net6.0\staticwebasse
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\obj\Debug\net6.0\scopedcss\bundle\ELibrary.UI.styles.css
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\obj\Debug\net6.0\ELibrary.UI.csproj.CopyComplete
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\obj\Debug\net6.0\ELibrary.UI.dll
-C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\obj\Debug\net6.0\refint\ELibrary.UI.dll
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\obj\Debug\net6.0\ELibrary.UI.pdb
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\obj\Debug\net6.0\ELibrary.UI.genruntimeconfig.cache
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\obj\Debug\net6.0\ref\ELibrary.UI.dll
-C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\bin\Debug\net6.0\Mapster.dll
-C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\bin\Debug\net6.0\Mapster.Core.dll
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\bin\Debug\net6.0\MediatR.dll
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\bin\Debug\net6.0\MediatR.Contracts.dll
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
@@ -73,3 +70,4 @@ C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\bin\Debug\net6.0\ELibrary.Appl
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\bin\Debug\net6.0\Elibrary.Infrastructure.dll
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\bin\Debug\net6.0\Elibrary.Infrastructure.pdb
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\bin\Debug\net6.0\ELibrary.Application.Contracts.pdb
+C:\Users\booku\RiderProjects\ELibrary\ELibrary.UI\bin\Debug\net6.0\ref\ELibrary.UI.dll

@@ -17,8 +17,8 @@ namespace ELibrary.Application.Contracts.Responses
         public DateTime OriginallyPublishedAt { get; set; }
         public DateTime AppPublishedAt { get; set; }
 
-        public ICollection<long> AuthorIds { get; set; }
-        public ICollection<long> FileIds { get; set; }
-        
+        public ICollection<Author> Authors { get; set; } = new HashSet<Author>();
+        public ICollection<DownloadableFile> Files { get; set; } = new HashSet<DownloadableFile>();
+
     }
 }

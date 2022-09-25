@@ -22,28 +22,28 @@ namespace ELibrary.Infrastructure.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Author<int>Book<int>", b =>
+            modelBuilder.Entity("AuthorBook", b =>
                 {
-                    b.Property<int>("AuthorsID")
-                        .HasColumnType("int");
+                    b.Property<long>("AuthorsId")
+                        .HasColumnType("bigint");
 
-                    b.Property<int>("BooksID")
-                        .HasColumnType("int");
+                    b.Property<long>("BooksId")
+                        .HasColumnType("bigint");
 
-                    b.HasKey("AuthorsID", "BooksID");
+                    b.HasKey("AuthorsId", "BooksId");
 
-                    b.HasIndex("BooksID");
+                    b.HasIndex("BooksId");
 
                     b.ToTable("BooksAuthors", (string)null);
                 });
 
-            modelBuilder.Entity("ELibrary.Domain.Entities.Author<int>", b =>
+            modelBuilder.Entity("ELibrary.Domain.Entities.Author", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -57,18 +57,18 @@ namespace ELibrary.Infrastructure.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
-                    b.ToTable("Author<int>");
+                    b.ToTable("Authors");
                 });
 
-            modelBuilder.Entity("ELibrary.Domain.Entities.Book<int>", b =>
+            modelBuilder.Entity("ELibrary.Domain.Entities.Book", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
                     b.Property<DateTime>("AppPublishedAt")
                         .HasColumnType("datetime2");
@@ -91,21 +91,21 @@ namespace ELibrary.Infrastructure.Persistence.Migrations
                     b.Property<DateTime>("OriginallyPublishedAt")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("ELibrary.Domain.Entities.DownloadableFile<int>", b =>
+            modelBuilder.Entity("ELibrary.Domain.Entities.DownloadableFile", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
-                    b.Property<int>("BookID")
-                        .HasColumnType("int");
+                    b.Property<long>("BookId")
+                        .HasColumnType("bigint");
 
                     b.Property<int>("Format")
                         .HasColumnType("int");
@@ -114,40 +114,40 @@ namespace ELibrary.Infrastructure.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
-                    b.HasIndex("BookID");
+                    b.HasIndex("BookId");
 
-                    b.ToTable("DownloadableFile<int>");
+                    b.ToTable("Files");
                 });
 
-            modelBuilder.Entity("Author<int>Book<int>", b =>
+            modelBuilder.Entity("AuthorBook", b =>
                 {
-                    b.HasOne("ELibrary.Domain.Entities.Author<int>", null)
+                    b.HasOne("ELibrary.Domain.Entities.Author", null)
                         .WithMany()
-                        .HasForeignKey("AuthorsID")
+                        .HasForeignKey("AuthorsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ELibrary.Domain.Entities.Book<int>", null)
+                    b.HasOne("ELibrary.Domain.Entities.Book", null)
                         .WithMany()
-                        .HasForeignKey("BooksID")
+                        .HasForeignKey("BooksId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ELibrary.Domain.Entities.DownloadableFile<int>", b =>
+            modelBuilder.Entity("ELibrary.Domain.Entities.DownloadableFile", b =>
                 {
-                    b.HasOne("ELibrary.Domain.Entities.Book<int>", "Book")
+                    b.HasOne("ELibrary.Domain.Entities.Book", "Book")
                         .WithMany("DownloadableFiles")
-                        .HasForeignKey("BookID")
+                        .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Book");
                 });
 
-            modelBuilder.Entity("ELibrary.Domain.Entities.Book<int>", b =>
+            modelBuilder.Entity("ELibrary.Domain.Entities.Book", b =>
                 {
                     b.Navigation("DownloadableFiles");
                 });

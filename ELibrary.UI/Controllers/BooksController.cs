@@ -6,7 +6,6 @@ using ELibrary.Application.Commands;
 using ELibrary.Application.Queries;
 using ELibrary.Application.Contracts.Requests;
 using ELibrary.Application.Contracts.Responses;
-using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,7 +17,7 @@ namespace ELibrary.UI.Controllers
     {
         private readonly IMediator _mediator;
 
-        public BooksController(IMediator mediator, IMapper mapper)
+        public BooksController(IMediator mediator)
         {
             _mediator = mediator;
         }
