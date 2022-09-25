@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Mapster" Version="7.3.0" />
+        <PackageReference Include="MediatR" Version="10.0.1" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ELibrary.Application\ELibrary.Application.csproj" />
+      <ProjectReference Include="..\ELibrary.Infrastructure.Persistence\ELibrary.Infrastructure.Persistence.csproj" />
+      <ProjectReference Include="..\Elibrary.Infrastructure\Elibrary.Infrastructure.csproj" />
+      <ProjectReference Include="..\ELibrary.Application.Contracts\ELibrary.Application.Contracts.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="library.png" />
+    </ItemGroup>
+
+</Project>
