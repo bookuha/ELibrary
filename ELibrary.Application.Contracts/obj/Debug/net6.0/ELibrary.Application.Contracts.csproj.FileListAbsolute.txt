@@ -12,4 +12,4 @@ C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application.Contracts\obj\Debug\n
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application.Contracts\obj\Debug\net6.0\ELibrary.Application.Contracts.dll
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application.Contracts\obj\Debug\net6.0\ELibrary.Application.Contracts.pdb
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application.Contracts\obj\Debug\net6.0\ref\ELibrary.Application.Contracts.dll
-C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application.Contracts\bin\Debug\net6.0\ref\ELibrary.Application.Contracts.dll
+C:\Users\booku\RiderProjects\ELibrary\ELibrary.Application.Contracts\obj\Debug\net6.0\refint\ELibrary.Application.Contracts.dll

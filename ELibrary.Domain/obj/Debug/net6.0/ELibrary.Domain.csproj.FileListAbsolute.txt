@@ -9,4 +9,4 @@ C:\Users\booku\RiderProjects\ELibrary\ELibrary.Domain\obj\Debug\net6.0\ELibrary.
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Domain\obj\Debug\net6.0\ELibrary.Domain.dll
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Domain\obj\Debug\net6.0\ELibrary.Domain.pdb
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Domain\obj\Debug\net6.0\ref\ELibrary.Domain.dll
-C:\Users\booku\RiderProjects\ELibrary\ELibrary.Domain\bin\Debug\net6.0\ref\ELibrary.Domain.dll
+C:\Users\booku\RiderProjects\ELibrary\ELibrary.Domain\obj\Debug\net6.0\refint\ELibrary.Domain.dll

@@ -10,8 +10,8 @@
         "dependencies": {
           "ELibrary.Application": "1.0.0",
           "ELibrary.Application.Contracts": "1.0.0",
+          "ELibrary.Infrastructure": "1.0.0",
           "ELibrary.Infrastructure.Persistence": "1.0.0",
-          "Elibrary.Infrastructure": "1.0.0",
           "MediatR": "10.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
           "Swashbuckle.AspNetCore": "6.2.3"
@@ -494,8 +494,8 @@
         "dependencies": {
           "ELibrary.Application.Contracts": "1.0.0",
           "ELibrary.Domain": "1.0.0",
+          "ELibrary.Infrastructure": "1.0.0",
           "ELibrary.Infrastructure.Persistence": "1.0.0",
-          "Elibrary.Infrastructure": "1.0.0",
           "MediatR": "10.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1"
         },
@@ -520,7 +520,7 @@
           "ELibrary.Domain.dll": {}
         }
       },
-      "Elibrary.Infrastructure/1.0.0": {
+      "ELibrary.Infrastructure/1.0.0": {
         "dependencies": {
           "ELibrary.Application.Contracts": "1.0.0",
           "ELibrary.Domain": "1.0.0",
@@ -529,7 +529,7 @@
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1"
         },
         "runtime": {
-          "Elibrary.Infrastructure.dll": {}
+          "ELibrary.Infrastructure.dll": {}
         }
       },
       "ELibrary.Infrastructure.Persistence/1.0.0": {
@@ -910,7 +910,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Elibrary.Infrastructure/1.0.0": {
+    "ELibrary.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

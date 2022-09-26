@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELibrary.Domain", "ELibrary
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELibrary.Infrastructure.Persistence", "ELibrary.Infrastructure.Persistence\ELibrary.Infrastructure.Persistence.csproj", "{BFAD1EAB-5AAD-460B-A51D-87FCD39F11D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elibrary.Infrastructure", "Elibrary.Infrastructure\Elibrary.Infrastructure.csproj", "{02261746-F92F-4DAB-8D4A-647926C3A1B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELibrary.Infrastructure", "ELibrary.Infrastructure\ELibrary.Infrastructure.csproj", "{02261746-F92F-4DAB-8D4A-647926C3A1B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELibrary.Application", "ELibrary.Application\ELibrary.Application.csproj", "{F56EC65C-4F53-48D3-B41E-178199DB80A7}"
 EndProject

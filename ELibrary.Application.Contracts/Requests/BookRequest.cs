@@ -1,10 +1,12 @@
 using System;
+using System.Collections.Generic;
 using ELibrary.Domain.Enums;
 
 namespace ELibrary.Application.Contracts.Requests
 {
     public record BookRequest()
     {
+        public long Id { get; set; }
         public string Name { get; set; }
         public Genres Genres { get; set; }
         public string BriefDescription { get; set; }

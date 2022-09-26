@@ -15,7 +15,7 @@
     <ItemGroup>
       <ProjectReference Include="..\ELibrary.Application\ELibrary.Application.csproj" />
       <ProjectReference Include="..\ELibrary.Infrastructure.Persistence\ELibrary.Infrastructure.Persistence.csproj" />
-      <ProjectReference Include="..\Elibrary.Infrastructure\Elibrary.Infrastructure.csproj" />
+      <ProjectReference Include="..\ELibrary.Infrastructure\ELibrary.Infrastructure.csproj" />
       <ProjectReference Include="..\ELibrary.Application.Contracts\ELibrary.Application.Contracts.csproj" />
     </ItemGroup>
 

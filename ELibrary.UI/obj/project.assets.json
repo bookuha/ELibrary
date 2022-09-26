@@ -709,8 +709,8 @@
         "dependencies": {
           "ELibrary.Application.Contracts": "1.0.0",
           "ELibrary.Domain": "1.0.0",
+          "ELibrary.Infrastructure": "1.0.0",
           "ELibrary.Infrastructure.Persistence": "1.0.0",
-          "Elibrary.Infrastructure": "1.0.0",
           "MediatR": "10.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1"
         },
@@ -748,7 +748,7 @@
           "bin/placeholder/ELibrary.Domain.dll": {}
         }
       },
-      "Elibrary.Infrastructure/1.0.0": {
+      "ELibrary.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -759,10 +759,10 @@
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1"
         },
         "compile": {
-          "bin/placeholder/Elibrary.Infrastructure.dll": {}
+          "bin/placeholder/ELibrary.Infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Elibrary.Infrastructure.dll": {}
+          "bin/placeholder/ELibrary.Infrastructure.dll": {}
         }
       },
       "ELibrary.Infrastructure.Persistence/1.0.0": {
@@ -2130,10 +2130,10 @@
       "path": "../ELibrary.Domain/ELibrary.Domain.csproj",
       "msbuildProject": "../ELibrary.Domain/ELibrary.Domain.csproj"
     },
-    "Elibrary.Infrastructure/1.0.0": {
+    "ELibrary.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../Elibrary.Infrastructure/Elibrary.Infrastructure.csproj",
-      "msbuildProject": "../Elibrary.Infrastructure/Elibrary.Infrastructure.csproj"
+      "path": "../ELibrary.Infrastructure/ELibrary.Infrastructure.csproj",
+      "msbuildProject": "../ELibrary.Infrastructure/ELibrary.Infrastructure.csproj"
     },
     "ELibrary.Infrastructure.Persistence/1.0.0": {
       "type": "project",
@@ -2145,8 +2145,8 @@
     "net6.0": [
       "ELibrary.Application >= 1.0.0",
       "ELibrary.Application.Contracts >= 1.0.0",
+      "ELibrary.Infrastructure >= 1.0.0",
       "ELibrary.Infrastructure.Persistence >= 1.0.0",
-      "Elibrary.Infrastructure >= 1.0.0",
       "MediatR >= 10.0.1",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 10.0.1",
       "Swashbuckle.AspNetCore >= 6.2.3"
@@ -2188,8 +2188,8 @@
             "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure.Persistence\\ELibrary.Infrastructure.Persistence.csproj": {
               "projectPath": "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure.Persistence\\ELibrary.Infrastructure.Persistence.csproj"
             },
-            "C:\\Users\\booku\\RiderProjects\\ELibrary\\Elibrary.Infrastructure\\Elibrary.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\booku\\RiderProjects\\ELibrary\\Elibrary.Infrastructure\\Elibrary.Infrastructure.csproj"
+            "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure\\ELibrary.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure\\ELibrary.Infrastructure.csproj"
             }
           }
         }
@@ -2235,7 +2235,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

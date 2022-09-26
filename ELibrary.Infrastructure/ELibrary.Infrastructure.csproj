@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>ELibrary.Infrastructure</AssemblyName>
+        <RootNamespace>ELibrary.Infrastructure</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="10.0.1" />
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ELibrary.Application.Contracts\ELibrary.Application.Contracts.csproj" />
+      <ProjectReference Include="..\ELibrary.Domain\ELibrary.Domain.csproj" />
+      <ProjectReference Include="..\ELibrary.Infrastructure.Persistence\ELibrary.Infrastructure.Persistence.csproj" />
+    </ItemGroup>
+
+</Project>

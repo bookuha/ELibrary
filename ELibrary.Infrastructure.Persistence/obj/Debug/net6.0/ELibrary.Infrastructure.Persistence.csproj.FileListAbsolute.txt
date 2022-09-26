@@ -15,4 +15,4 @@ C:\Users\booku\RiderProjects\ELibrary\ELibrary.Infrastructure.Persistence\obj\De
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Infrastructure.Persistence\obj\Debug\net6.0\ELibrary.Infrastructure.Persistence.pdb
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Infrastructure.Persistence\obj\Debug\net6.0\ELibrary.Infrastructure.Persistence.genruntimeconfig.cache
 C:\Users\booku\RiderProjects\ELibrary\ELibrary.Infrastructure.Persistence\obj\Debug\net6.0\ref\ELibrary.Infrastructure.Persistence.dll
-C:\Users\booku\RiderProjects\ELibrary\ELibrary.Infrastructure.Persistence\bin\Debug\net6.0\ref\ELibrary.Infrastructure.Persistence.dll
+C:\Users\booku\RiderProjects\ELibrary\ELibrary.Infrastructure.Persistence\obj\Debug\net6.0\refint\ELibrary.Infrastructure.Persistence.dll

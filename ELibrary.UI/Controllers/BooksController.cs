@@ -28,7 +28,9 @@ namespace ELibrary.UI.Controllers
         {
             var query = new GetAllBooksQuery();
             var result = await _mediator.Send(query);
-            return Ok(result);
+            return result.Match(
+                response => Ok(response),
+                error => Problem(statusCode: (int) error.StatusCode, title: error.ErrorMessage));
         }
             
         [HttpGet("{id}")]
@@ -36,33 +38,39 @@ namespace ELibrary.UI.Controllers
         {
             var query = new GetBookByIdQuery(id);
             var result = await _mediator.Send(query); // Cancellation Token can be used
-            return result != null ? Ok(result) : NotFound();
+            return result.Match(
+                response => Ok(response),  
+                error => Problem(statusCode: (int)error.StatusCode, title: error.ErrorMessage));
         }
 
        [HttpPost]
-        public async Task<ActionResult<BookResponse>> Create([FromBody] BookRequest bookRequest) // 
+        public async Task<ActionResult<BookResponse>> Create([FromBody] BookRequest bookRequest) 
         {
             var query = new CreateBookCommand(bookRequest);
             var result = await _mediator.Send(query);
-            return CreatedAtAction(nameof(GetById), new {bookId = result.Id}, result);
+            return result.Match(
+                response => CreatedAtAction(nameof(Create), new {bookId = response.Id}, response),
+                error => Problem(statusCode: (int)error.StatusCode, title: error.ErrorMessage));
         }
 
         [HttpPut]
-        public IActionResult Update(int id, BookRequest book)
+        public async Task<ActionResult<BookResponse>> Update(int id, BookRequest bookRequest)
         {
-            throw new NotImplementedException();
-        }
-
-        [HttpPatch]
-        public IActionResult Patch(BookRequest bookRequest)
-        {
-            throw new NotImplementedException();
+            var query = new UpdateBookCommand(id, bookRequest);
+            var result = await _mediator.Send(query);
+            return result.Match(
+                response=>Ok(response),
+                error => Problem(statusCode: (int)error.StatusCode, title: error.ErrorMessage));
         }
 
         [HttpDelete]
-        public IActionResult Remove()
+        public async Task<ActionResult> Remove(long id)
         {
-            throw new NotImplementedException();
+            var query = new DeleteBookCommand(id);
+            var result = await _mediator.Send(query);
+            return result.Match(
+                response=>Ok(response),
+                error => Problem(statusCode: (int)error.StatusCode, title: error.ErrorMessage));
         }
         
     }

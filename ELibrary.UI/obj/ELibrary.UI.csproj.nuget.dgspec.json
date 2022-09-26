@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -95,8 +95,8 @@
               "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure.Persistence\\ELibrary.Infrastructure.Persistence.csproj": {
                 "projectPath": "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure.Persistence\\ELibrary.Infrastructure.Persistence.csproj"
               },
-              "C:\\Users\\booku\\RiderProjects\\ELibrary\\Elibrary.Infrastructure\\Elibrary.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\booku\\RiderProjects\\ELibrary\\Elibrary.Infrastructure\\Elibrary.Infrastructure.csproj"
+              "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure\\ELibrary.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure\\ELibrary.Infrastructure.csproj"
               }
             }
           }
@@ -135,7 +135,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -199,7 +199,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -281,18 +281,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\booku\\RiderProjects\\ELibrary\\Elibrary.Infrastructure\\Elibrary.Infrastructure.csproj": {
+    "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure\\ELibrary.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\booku\\RiderProjects\\ELibrary\\Elibrary.Infrastructure\\Elibrary.Infrastructure.csproj",
-        "projectName": "Elibrary.Infrastructure",
-        "projectPath": "C:\\Users\\booku\\RiderProjects\\ELibrary\\Elibrary.Infrastructure\\Elibrary.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure\\ELibrary.Infrastructure.csproj",
+        "projectName": "ELibrary.Infrastructure",
+        "projectPath": "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure\\ELibrary.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\booku\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\booku\\RiderProjects\\ELibrary\\Elibrary.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\booku\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -355,7 +355,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -392,8 +392,8 @@
               "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure.Persistence\\ELibrary.Infrastructure.Persistence.csproj": {
                 "projectPath": "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure.Persistence\\ELibrary.Infrastructure.Persistence.csproj"
               },
-              "C:\\Users\\booku\\RiderProjects\\ELibrary\\Elibrary.Infrastructure\\Elibrary.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\booku\\RiderProjects\\ELibrary\\Elibrary.Infrastructure\\Elibrary.Infrastructure.csproj"
+              "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure\\ELibrary.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\booku\\RiderProjects\\ELibrary\\ELibrary.Infrastructure\\ELibrary.Infrastructure.csproj"
               }
             }
           }
@@ -439,7 +439,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
