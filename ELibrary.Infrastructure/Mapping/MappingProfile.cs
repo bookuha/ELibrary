@@ -1,7 +1,6 @@
 using ELibrary.Application.Contracts.Requests;
 using ELibrary.Application.Contracts.Responses;
 using ELibrary.Domain.Entities;
-using ELibrary.Domain.Enums;
 
 namespace ELibrary.Infrastructure.Mapping
 {
@@ -10,16 +9,14 @@ namespace ELibrary.Infrastructure.Mapping
         public static Book ToEntity(this BookRequest request)
         {
             if (request != null)
-            {
                 return new Book
                 {
                     Name = request.Name,
                     Genres = request.Genres,
                     BriefDescription = request.BriefDescription,
                     FullDescription = request.FullDescription,
-                    OriginallyPublishedAt = request.OriginallyPublishedAt,
+                    OriginallyPublishedAt = request.OriginallyPublishedAt
                 };
-            }
 
             return null;
         }
@@ -27,7 +24,6 @@ namespace ELibrary.Infrastructure.Mapping
         public static BookResponse ToResponse(this Book entity)
         {
             if (entity != null)
-            {
                 return new BookResponse
                 {
                     Id = entity.Id,
@@ -38,9 +34,8 @@ namespace ELibrary.Infrastructure.Mapping
                     OriginallyPublishedAt = entity.OriginallyPublishedAt,
                     AppPublishedAt = entity.AppPublishedAt,
                     Authors = entity.Authors,
-                    Files = entity.DownloadableFiles,
+                    Files = entity.DownloadableFiles
                 };
-            }
 
             return null;
         }

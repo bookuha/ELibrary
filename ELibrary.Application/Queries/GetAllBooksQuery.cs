@@ -6,8 +6,5 @@ using MediatR;
 
 namespace ELibrary.Application.Queries
 {
-    public record GetAllBooksQuery() : IRequest<Either<List<BookResponse>, IServiceException>>;
-
-
-
+    public record GetAllBooksQuery : IRequest<Either<List<BookResponse>, IServiceException>>;
 }

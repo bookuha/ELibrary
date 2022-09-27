@@ -1,5 +1,3 @@
-
-using System;
 using ELibrary.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,7 +11,8 @@ namespace ELibrary.Infrastructure.Persistence
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ELibrary;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer(
+                @"Server=(localdb)\mssqllocaldb;Database=ELibrary;Trusted_Connection=True;MultipleActiveResultSets=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

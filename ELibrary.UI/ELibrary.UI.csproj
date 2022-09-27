@@ -7,20 +7,20 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="MediatR" Version="10.0.1" />
-        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+        <PackageReference Include="MediatR" Version="10.0.1"/>
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ELibrary.Application\ELibrary.Application.csproj" />
-      <ProjectReference Include="..\ELibrary.Infrastructure.Persistence\ELibrary.Infrastructure.Persistence.csproj" />
-      <ProjectReference Include="..\ELibrary.Infrastructure\ELibrary.Infrastructure.csproj" />
-      <ProjectReference Include="..\ELibrary.Application.Contracts\ELibrary.Application.Contracts.csproj" />
+        <ProjectReference Include="..\ELibrary.Application\ELibrary.Application.csproj"/>
+        <ProjectReference Include="..\ELibrary.Infrastructure.Persistence\ELibrary.Infrastructure.Persistence.csproj"/>
+        <ProjectReference Include="..\ELibrary.Infrastructure\ELibrary.Infrastructure.csproj"/>
+        <ProjectReference Include="..\ELibrary.Application.Contracts\ELibrary.Application.Contracts.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="library.png" />
+        <Content Include="library.png"/>
     </ItemGroup>
 
 </Project>

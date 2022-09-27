@@ -9,5 +9,4 @@ namespace ELibrary.Application.Commands
     public record UpdateBookCommand(
         long Id,
         BookRequest BookRequest) : IRequest<Either<BookResponse, IServiceException>>;
-
 }

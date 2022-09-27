@@ -17,8 +17,6 @@ builder.Services.AddDbContext<LibraryContext>();
 builder.Services.AddMediatR(typeof(GetAllBooksHandler).GetTypeInfo().Assembly);
 
 
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,11 +1,9 @@
-
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ELibrary.Application.Commands;
-using ELibrary.Application.Queries;
 using ELibrary.Application.Contracts.Requests;
 using ELibrary.Application.Contracts.Responses;
+using ELibrary.Application.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -32,46 +30,49 @@ namespace ELibrary.UI.Controllers
                 response => Ok(response),
                 error => Problem(statusCode: (int) error.StatusCode, title: error.ErrorMessage));
         }
-            
+
+        // GET: api/books/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<BookResponse>> GetById(long id)
         {
             var query = new GetBookByIdQuery(id);
             var result = await _mediator.Send(query); // Cancellation Token can be used
             return result.Match(
-                response => Ok(response),  
-                error => Problem(statusCode: (int)error.StatusCode, title: error.ErrorMessage));
+                response => Ok(response),
+                error => Problem(statusCode: (int) error.StatusCode, title: error.ErrorMessage));
         }
 
-       [HttpPost]
-        public async Task<ActionResult<BookResponse>> Create([FromBody] BookRequest bookRequest) 
+        // POST: api/books
+        [HttpPost]
+        public async Task<ActionResult<BookResponse>> Create([FromBody] BookRequest bookRequest)
         {
             var query = new CreateBookCommand(bookRequest);
             var result = await _mediator.Send(query);
             return result.Match(
                 response => CreatedAtAction(nameof(Create), new {bookId = response.Id}, response),
-                error => Problem(statusCode: (int)error.StatusCode, title: error.ErrorMessage));
+                error => Problem(statusCode: (int) error.StatusCode, title: error.ErrorMessage));
         }
 
+        // PUT: api/books/{id}
         [HttpPut]
         public async Task<ActionResult<BookResponse>> Update(int id, BookRequest bookRequest)
         {
             var query = new UpdateBookCommand(id, bookRequest);
             var result = await _mediator.Send(query);
             return result.Match(
-                response=>Ok(response),
-                error => Problem(statusCode: (int)error.StatusCode, title: error.ErrorMessage));
+                response => Ok(response),
+                error => Problem(statusCode: (int) error.StatusCode, title: error.ErrorMessage));
         }
 
+        // DELETE: api/books/{id}
         [HttpDelete]
         public async Task<ActionResult> Remove(long id)
         {
             var query = new DeleteBookCommand(id);
             var result = await _mediator.Send(query);
             return result.Match(
-                response=>Ok(response),
-                error => Problem(statusCode: (int)error.StatusCode, title: error.ErrorMessage));
+                response => Ok(response),
+                error => Problem(statusCode: (int) error.StatusCode, title: error.ErrorMessage));
         }
-        
     }
 }

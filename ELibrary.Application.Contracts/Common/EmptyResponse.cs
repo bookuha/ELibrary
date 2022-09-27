@@ -1,4 +1,4 @@
 namespace ELibrary.Application.Contracts.Common
 {
-    public record struct EmptyResponse();
+    public record struct EmptyResponse;
 }

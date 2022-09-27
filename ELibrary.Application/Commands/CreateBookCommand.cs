@@ -7,7 +7,5 @@ using MediatR;
 namespace ELibrary.Application.Commands
 {
     public record CreateBookCommand(
-        BookRequest Book) : IRequest<Either<BookResponse,IServiceException>>;
-
-
+        BookRequest Book) : IRequest<Either<BookResponse, IServiceException>>;
 }

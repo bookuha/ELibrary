@@ -6,5 +6,5 @@ using MediatR;
 namespace ELibrary.Application.Commands
 {
     public record DeleteBookCommand(
-        long Id) : IRequest<Either<BookResponse,IServiceException>>;
+        long Id) : IRequest<Either<BookResponse, IServiceException>>;
 }

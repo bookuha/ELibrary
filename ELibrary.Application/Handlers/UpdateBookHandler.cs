@@ -14,7 +14,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ELibrary.Application.Handlers
 {
-    public class UpdateBookHandler : IRequestHandler<UpdateBookCommand,Either<BookResponse, IServiceException>>
+    public class UpdateBookHandler : IRequestHandler<UpdateBookCommand, Either<BookResponse, IServiceException>>
     {
         private readonly LibraryContext _context;
 
@@ -23,19 +23,14 @@ namespace ELibrary.Application.Handlers
             _context = context;
         }
 
-        public async Task<Either<BookResponse, IServiceException>> Handle(UpdateBookCommand request, CancellationToken cancellationToken) 
+        public async Task<Either<BookResponse, IServiceException>> Handle(UpdateBookCommand request,
+            CancellationToken cancellationToken)
         {
-            if (request.Id != request.BookRequest.Id)
-            {
-                return new IdMismatchError();
-            }
-            
+            if (request.Id != request.BookRequest.Id) return new IdMismatchError();
+
             var book = await _context.Books.FindAsync(request.Id);
-            if (book == null)
-            {
-                return new NotFoundError();
-            }
-            
+            if (book == null) return new NotFoundError();
+
             book = request.BookRequest.ToEntity();
 
             book.Authors = await _context.Authors.Where(a => request.BookRequest.AuthorIds.Contains(a.Id))
@@ -43,7 +38,7 @@ namespace ELibrary.Application.Handlers
             book.DownloadableFiles = await _context.Files.Where(f => request.BookRequest.FileIds.Contains(f.Id))
                 .ToListAsync(cancellationToken);
 
-            
+
             _context.Books.Update(book);
 
             try

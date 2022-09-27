@@ -1,6 +1,5 @@
-using System.Collections.Generic;
-using ELibrary.Domain.Enums;
 using ELibrary.Domain.Common;
+using ELibrary.Domain.Enums;
 
 namespace ELibrary.Domain.Entities
 {
@@ -8,7 +7,7 @@ namespace ELibrary.Domain.Entities
     {
         public FileFormat Format { get; set; }
         public string Link { get; set; } = "No link available";
-        
+
         public Book Book { get; set; }
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 using ELibrary.Application.Commands;
@@ -12,7 +11,9 @@ using MediatR;
 
 namespace ELibrary.Application.Handlers
 {
-    public class DeleteBookHandler : IRequestHandler<DeleteBookCommand, Either<BookResponse, IServiceException>> // Make it IRequestHandler and return Either
+    public class
+        DeleteBookHandler : IRequestHandler<DeleteBookCommand,
+            Either<BookResponse, IServiceException>> // Make it IRequestHandler and return Either
     {
         private readonly LibraryContext _context;
 
@@ -21,13 +22,11 @@ namespace ELibrary.Application.Handlers
             _context = context;
         }
 
-        public async Task<Either<BookResponse, IServiceException>> Handle(DeleteBookCommand request, CancellationToken cancellationToken) // to public
+        public async Task<Either<BookResponse, IServiceException>> Handle(DeleteBookCommand request,
+            CancellationToken cancellationToken)
         {
             var book = await _context.Books.FindAsync(request.Id);
-            if (book == null)
-            {
-                return new NotFoundError();
-            }
+            if (book == null) return new NotFoundError();
 
             _context.Remove(book);
             await _context.SaveChangesAsync(cancellationToken);
