@@ -1,10 +1,9 @@
 using ELibrary.Application.Contracts.Common;
 using ELibrary.Application.Contracts.Exceptions;
 using ELibrary.Application.Contracts.Responses;
-using ELibrary.Domain.Entities;
 using MediatR;
 
-namespace ELibrary.Application.Queries
+namespace ELibrary.Application.Queries.Book
 {
     public class GetBookByIdQuery : IRequest<Either<BookResponse,IServiceException>>
     {
