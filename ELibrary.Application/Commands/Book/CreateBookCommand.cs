@@ -4,7 +4,7 @@ using ELibrary.Application.Contracts.Requests;
 using ELibrary.Application.Contracts.Responses;
 using MediatR;
 
-namespace ELibrary.Application.Commands.Book
+namespace ELibrary.Application.Commands
 {
     public record CreateBookCommand(
         BookRequest Book) : IRequest<Either<BookResponse,IServiceException>>;
