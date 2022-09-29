@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using ELibrary.Application.Commands;
@@ -9,7 +10,7 @@ using ELibrary.Infrastructure.Mapping;
 using ELibrary.Infrastructure.Persistence;
 using MediatR;
 
-namespace ELibrary.Application.Handlers.Book
+namespace ELibrary.Application.Handlers
 {
     public class DeleteBookHandler : IRequestHandler<DeleteBookCommand, Either<BookResponse, IServiceException>> // Make it IRequestHandler and return Either
     {
