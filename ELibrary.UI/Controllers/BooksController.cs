@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ELibrary.Application.Commands;
-using ELibrary.Application.Contracts.Requests;
+using ELibrary.Application.Books.Commands.CreateBook;
+using ELibrary.Application.Books.Commands.DeleteBook;
+using ELibrary.Application.Books.Commands.UpdateBook;
+using ELibrary.Application.Books.Queries.GetAllBooks;
+using ELibrary.Application.Books.Queries.GetBookById;
 using ELibrary.Application.Contracts.Responses;
-using ELibrary.Application.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,7 +24,7 @@ namespace ELibrary.UI.Controllers
 
         // GET: api/books
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BookResponse>>> Get()
+        public async Task<ActionResult<IEnumerable<BookResponse>>> Get() 
         {
             var query = new GetAllBooksQuery();
             var result = await _mediator.Send(query);
@@ -33,9 +35,8 @@ namespace ELibrary.UI.Controllers
 
         // GET: api/books/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<BookResponse>> GetById(long id)
+        public async Task<ActionResult<BookResponse>> GetById([FromBody] GetBookByIdQuery query)
         {
-            var query = new GetBookByIdQuery(id);
             var result = await _mediator.Send(query); // Cancellation Token can be used
             return result.Match(
                 response => Ok(response),
@@ -44,9 +45,8 @@ namespace ELibrary.UI.Controllers
 
         // POST: api/books
         [HttpPost]
-        public async Task<ActionResult<BookResponse>> Create([FromBody] BookRequest bookRequest)
+        public async Task<ActionResult<BookResponse>> Create([FromBody] CreateBookCommand query)
         {
-            var query = new CreateBookCommand(bookRequest);
             var result = await _mediator.Send(query);
             return result.Match(
                 response => CreatedAtAction(nameof(Create), new {bookId = response.Id}, response),
@@ -55,9 +55,8 @@ namespace ELibrary.UI.Controllers
 
         // PUT: api/books/{id}
         [HttpPut]
-        public async Task<ActionResult<BookResponse>> Update(int id, BookRequest bookRequest)
+        public async Task<ActionResult<BookResponse>> Update([FromBody] UpdateBookCommand query)
         {
-            var query = new UpdateBookCommand(id, bookRequest);
             var result = await _mediator.Send(query);
             return result.Match(
                 response => Ok(response),
@@ -66,9 +65,8 @@ namespace ELibrary.UI.Controllers
 
         // DELETE: api/books/{id}
         [HttpDelete]
-        public async Task<ActionResult> Remove(long id)
+        public async Task<ActionResult> Remove(DeleteBookCommand query)
         {
-            var query = new DeleteBookCommand(id);
             var result = await _mediator.Send(query);
             return result.Match(
                 response => Ok(response),
