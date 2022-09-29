@@ -12,7 +12,7 @@ using ELibrary.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ELibrary.Application.Handlers
+namespace ELibrary.Application.Handlers.Book
 {
     public class UpdateBookHandler : IRequestHandler<UpdateBookCommand,Either<BookResponse, IServiceException>>
     {

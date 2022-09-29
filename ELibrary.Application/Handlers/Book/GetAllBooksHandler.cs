@@ -4,15 +4,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using ELibrary.Application.Contracts.Common;
 using ELibrary.Application.Contracts.Exceptions;
-using ELibrary.Application.Queries;
-using ELibrary.Domain.Entities;
-using ELibrary.Infrastructure.Persistence;
 using ELibrary.Application.Contracts.Responses;
+using ELibrary.Application.Queries;
 using ELibrary.Infrastructure.Mapping;
+using ELibrary.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ELibrary.Application.Handlers
+namespace ELibrary.Application.Handlers.Book
 {
     public class GetAllBooksHandler : IRequestHandler<GetAllBooksQuery, Either<List<BookResponse>, IServiceException>>
 
