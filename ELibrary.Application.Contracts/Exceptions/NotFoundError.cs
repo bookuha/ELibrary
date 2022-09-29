@@ -1,7 +1,6 @@
 using System.Net;
-using ELibrary.Application.Contracts.Exceptions;
 
-namespace ELibrary.Application.Contracts.Errors
+namespace ELibrary.Application.Contracts.Exceptions
 {
     public readonly record struct NotFoundError() : IServiceException
     {

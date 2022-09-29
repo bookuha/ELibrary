@@ -3,8 +3,8 @@ using ELibrary.Application.Contracts.Exceptions;
 using ELibrary.Application.Contracts.Responses;
 using MediatR;
 
-namespace ELibrary.Application.Commands
+namespace ELibrary.Application.Books.Queries.GetBookById
 {
-    public record DeleteBookCommand(
-        long Id) : IRequest<Either<BookResponse, IServiceException>>;
+    public record GetBookByIdQuery(long Id) : IRequest<Either<BookResponse, IServiceException>>;
+
 }

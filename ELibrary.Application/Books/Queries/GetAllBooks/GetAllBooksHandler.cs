@@ -5,13 +5,12 @@ using System.Threading.Tasks;
 using ELibrary.Application.Contracts.Common;
 using ELibrary.Application.Contracts.Exceptions;
 using ELibrary.Application.Contracts.Responses;
-using ELibrary.Application.Queries;
-using ELibrary.Infrastructure.Mapping;
+using ELibrary.Infrastructure.Maps;
 using ELibrary.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ELibrary.Application.Handlers.Book
+namespace ELibrary.Application.Books.Queries.GetAllBooks
 {
     public class GetAllBooksHandler : IRequestHandler<GetAllBooksQuery, Either<List<BookResponse>, IServiceException>>
 

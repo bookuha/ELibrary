@@ -1,4 +1,4 @@
-namespace ELibrary.Application.Commands.Book.Validators
+namespace ELibrary.Application.Books.Commands.CreateBook.Validators
 {
     public class CreateBookCommandValidator
     {
