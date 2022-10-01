@@ -3,9 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using ELibrary.Application.Contracts.Common;
-using ELibrary.Application.Contracts.Exceptions;
 using ELibrary.Application.Contracts.Responses;
-using ELibrary.Domain.Entities;
 using ELibrary.Infrastructure.Maps;
 using ELibrary.Infrastructure.Persistence;
 using MediatR;
@@ -13,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ELibrary.Application.Books.Commands.UpdateBook
 {
-    public class UpdateBookHandler : IRequestHandler<UpdateBookCommand,Either<BookResponse, IServiceException>>
+    public class UpdateBookHandler : IRequestHandler<UpdateBookCommand, Result<BookResponse>>
     {
         private readonly LibraryContext _context;
 
@@ -22,11 +20,10 @@ namespace ELibrary.Application.Books.Commands.UpdateBook
             _context = context;
         }
 
-        public async Task<Either<BookResponse, IServiceException>> Handle(UpdateBookCommand request, CancellationToken cancellationToken) 
+        public async Task<Result<BookResponse>> Handle(UpdateBookCommand request, CancellationToken cancellationToken)
         {
-
             var book = await _context.Books.FindAsync(request.Id);
-            if (book == null) return new NotFoundError();
+            if (book == null) return Error.NullValue; // TODO: Not Found result
 
 
             book.Name = request.Name;
@@ -38,8 +35,8 @@ namespace ELibrary.Application.Books.Commands.UpdateBook
                 .ToListAsync(cancellationToken);
             book.DownloadableFiles = await _context.Files.Where(file => request.FileIds.Contains(file.Id))
                 .ToListAsync(cancellationToken);
-            
-            
+
+
             _context.Books.Update(book); // Acts as upsert if key is missing
 
             try

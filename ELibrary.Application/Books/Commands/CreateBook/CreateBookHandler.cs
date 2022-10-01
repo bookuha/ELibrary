@@ -2,17 +2,14 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using ELibrary.Application.Contracts.Common;
-using ELibrary.Application.Contracts.Exceptions;
-using ELibrary.Application.Contracts.Responses;
 using ELibrary.Domain.Entities;
-using ELibrary.Infrastructure.Maps;
 using ELibrary.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace ELibrary.Application.Books.Commands.CreateBook
 {
-    public class CreateBookHandler : IRequestHandler<CreateBookCommand,Either<BookResponse, IServiceException>>
+    public class CreateBookHandler : IRequestHandler<CreateBookCommand, Result<long>>
     {
         private readonly LibraryContext _context;
 
@@ -21,7 +18,7 @@ namespace ELibrary.Application.Books.Commands.CreateBook
             _context = context;
         }
 
-        public async Task<Either<BookResponse, IServiceException>> Handle(CreateBookCommand request, CancellationToken cancellationToken)
+        public async Task<Result<long>> Handle(CreateBookCommand request, CancellationToken cancellationToken)
         {
             var book = new Book
             {
@@ -37,10 +34,9 @@ namespace ELibrary.Application.Books.Commands.CreateBook
             };
 
             _context.Books.Add(book);
-            
-            await _context.SaveChangesAsync(cancellationToken);
-            return book.ToResponse();
 
+            await _context.SaveChangesAsync(cancellationToken);
+            return book.Id;
         }
     }
 }
