@@ -1,11 +1,12 @@
 using System;
 using FluentValidation;
 
-namespace ELibrary.Application.Books.Commands.CreateBook
+namespace ELibrary.Application.Books.Commands.UpdateBook
 {
-    internal class CreateBookCommandValidator : AbstractValidator<CreateBookCommand>
+    public class UpdateBookCommandValidator : AbstractValidator<UpdateBookCommand>
     {
-        public CreateBookCommandValidator()
+
+        public UpdateBookCommandValidator()
         {
             RuleFor(bookCommand => bookCommand.Name).NotEmpty().MaximumLength(30);
 
@@ -15,7 +16,6 @@ namespace ELibrary.Application.Books.Commands.CreateBook
 
             RuleFor(bookCommand => bookCommand.OriginallyPublishedAt.Year)
                 .LessThanOrEqualTo(DateTime.Now.Year); // Feel like it is very bad
-            
         }
     }
 }

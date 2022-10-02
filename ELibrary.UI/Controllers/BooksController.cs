@@ -73,7 +73,7 @@ namespace ELibrary.UI.Controllers
 
         // DELETE: api/books/{id}
         [HttpDelete]
-        public async Task<IActionResult> Remove(DeleteBookCommand query)
+        public async Task<IActionResult> Remove(DeleteBookCommand query) // From route/query
         {
             var result = await _mediator.Send(query);
 
